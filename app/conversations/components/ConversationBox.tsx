@@ -51,6 +51,9 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
     return seenArray.filter((user) => user.email === userEmail).length !== 0;
   }, [lastMessage, userEmail]);
 
+  console.log(hasSeen);
+  console.log(lastMessage);
+
   const lastMessageText = useMemo(() => {
     if (lastMessage?.image) {
       return "Sent an image";
